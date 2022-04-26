@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <div><a href="{{route('paytm.purchase')}}">PayTm Payment</a></div>
                 </div>
             </div>
         </div>

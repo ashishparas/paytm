@@ -24,7 +24,7 @@ Auth::routes();
 
 Route::post('paytm-payment',[PaytmController::class, 'paytmPayment'])->name('paytm.payment');
 Route::post('paytm-callback',[PaytmController::class, 'paytmCallback'])->name('paytm.callback');
-Route::get('paytm-purchase',[PaytmController::class, 'paytmPurchase'])->name('paytm.purchase');
+Route::get('paytm-purchase/{user_id}/{name}/{email}/{mobile_no}',[PaytmController::class, 'paytmPurchase'])->name('paytm.purchase');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('order',[OrderController::class,"statusCheck"]);

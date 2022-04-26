@@ -30,6 +30,12 @@
                                 <label class="form-control">Enter Amount for Paytm Payment Demo</label>'
                                 <form method="post" action="{{route('paytm.payment')}}">
                                     @csrf
+                                    <input type="hidden" name="user_id" value="{{ (!$data['user_id'])?null: $data['user_id']}}">
+                                    <input type="hidden" name="email" value="{{ (!$data['email'])?null: $data['email']}}">
+                                    <input type="hidden" name="mobile_no" value="{{ (!$data['mobile_no'])?null: $data['mobile_no']}}">
+                                    <input type="hidden" name="name" value="{{ (!$data['name'])?null: $data['name']}}">
+
+
                                     <input type="text" name="amount" placeholder="RS 10" class="form-control"/>
                                     <button type="submit" class="btn btn-primary mt2">Pay</button>
                                 </form>

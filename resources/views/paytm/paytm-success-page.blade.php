@@ -14,6 +14,7 @@
             <th>UserId</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Amount</th>
            
         </tr>
         <tr>
@@ -22,9 +23,10 @@
             <td>{{ $data['user_id']; }}</td>
             <td>{{ $data['name']; }}</td>
             <td>{{ $data['email']; }}</td>
+            <td>{{ $data['amount']; }}</td>
             
             
         </tr>
     </table>
 </div>
-<a href="{{route('paytm.purchase')}}">Check the demo again</a>
+<a href="{{route('paytm.purchase',[$data['user_id'],$data['name'],$data['email'], $data['mobile_no']])}}">Check the demo again</a>
